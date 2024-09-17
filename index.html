@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Book Your flight</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed shadow-lg"
+        style="z-index: 44; width: 100%;">
+        <!-- Left Side: Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="Logo" class="d-inline-block align-top" style="width: 100px; height: auto;">
+        </a>
+
+        <!-- Toggler for small screens -->
+        <button
+            class="navbar-toggler d-flex align-content-between justify-content-between nav-bar-fixed d-block  d-lg-none"
+            type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center: Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Call Icon -->
+        <div class="ml-auto d-flex align-items-center ">
+            <a href="tel:+1234567890" class="nav-link d-none d-md-none d-lg-block">
+                <img src="./img/airplane_2200326.png" alt="" height="50px" width="50px">
+            </a>
+        </div>
+    </nav>
+    <div class="banner">
+        <div>
+            <h1>Book Your Flights Now</h1>
+            <p class="banner-text">
+            <div class="flex-wrap " style="height: 40px;">
+                <span id="fixed-text">Easy booking, affordable prices. </span>
+                <span id="dynamic-text"></span>
+                <span class="cursor w-100"></span>
+            </div>
+            </p>
+        </div>
+
+
+        <!-- <div class="flight-search-form">
+            <div class="toggle-container shadow-lg text-center">
+                <label class="roundtrip-label text-center" for="roundtrip">Round Trip</label>
+                <label class="oneway-label text-center" for="oneway">Oneway</label>
+                <div class="toggle-btn toggle-roundtrip"></div>
+                <input type="radio" id="roundtrip" name="trip" value="roundtrip" class="d-none" checked>
+                <input type="radio" id="oneway" name="trip" value="oneway" class="d-none">
+            </div>
+           
+            
+            <div id="date-alert" style="display: none;">Departure and return dates cannot be the same.</div>
+            
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-2  " style="padding-left: 15px;" >
+                        <input type="text" class="form-control " id="from-input" placeholder="From">
+                        <div id="from-alert" class="alert" style="display: none;">This airport has already been
+                            selected.</div>
+                        
+
+                    </div>
+
+                    
+                    <div class="form-group col-12 col-md-2">
+                        <input type="text" class="form-control" id="to-input" placeholder="To">
+                        <div id="to-alert" class="alert" style="display: none;">This airport has already been selected.
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-2">
+                        <input type="date" class="form-control" id="departure" placeholder="Departure">
+                    </div>
+                    <div class="form-group col-12 col-md-2 return-date">
+                        <input type="date" class="form-control" id="return" placeholder="Return">
+                        <div id="date-alert" class="date-alert" style="display: none;">Departure and Return dates cannot be the same.</div>
+                    </div>
+                    
+                    <div class="form-group col-12 col-md-2">
+                        <select class="form-control" id="passengers">
+                            <option>1 Passenger</option>
+                            <option>2 Passengers</option>
+                            <option>3 Passengers</option>
+                            <option>4 Passengers</option>
+                        </select>
+                    </div>
+                    <div class="form-group  col-12 col-md-2">
+                        <button type="submit" class="btn-search">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div> -->
+
+        <div class="flight-search-form">
+            <!-- Trip Toggle Button -->
+            <div class="trip-toggle" id="tripToggle">
+                <div class="slider one-way" id="slider"></div>
+                <div class="trip-option active" id="oneWay">One Way</div>
+                <div class="trip-option" id="roundTrip">Round Trip</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="from-input" class="form-control" required placeholder=" " />
+                    <label for="from-input">Flying From</label>
+                    <ul id="from-suggestions-list" class="suggestions-list"></ul>
+                    <div class="error-message" id="from-alert">Cannot be the same as destination</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="to-input" class="form-control" required placeholder=" " />
+                    <label for="to-input">Destination</label>
+
+                    <ul id="to-suggestions-list" class="suggestions-list"></ul>
+                    <div class="error-message" id="to-alert">Cannot be the same as origin</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" id="departure-input" class="form-control" required placeholder=" " />
+                    <label for="departure-input">Departure</label>
+                    <div class="error-message" id="departure-error">Select a valid date</div>
+                </div>
+
+                <div class="form-group" id="return-group">
+                    <input type="date" id="return-input" class="form-control" required placeholder=" " />
+                    <label for="return-input">Return</label>
+                    <div class="error-message" id="return-error">Select a valid return date</div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-search">Search</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="image-section">
+        <h2 class="section-heading">Explore Our Destinations</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
+                        <div class="image-overlay d-flex flex-r">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#" class="btn btn-primary">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#" class="btn btn-primary">$525*</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <img src="./img/city img.jpg" alt="Destination 2" class="img-fluid">
+                        <div class="image-overlay">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#" class="btn btn-primary">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#" class="btn btn-primary">$525*</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-card">
+                        <img src="./img/city img.jpg" alt="Destination 3" class="img-fluid">
+                        <div class="image-overlay">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#" class="btn btn-primary">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#" class="btn btn-primary">$525*</a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="rating-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="rating-card">
+                        <h3>Facebook Rating</h3>
+                        <div class="rating-details">
+                            <img src="./img/facebook.png" alt="Facebook" class="icon">
+                            <span class="rating-number">4.5</span>
+                        </div>
+                        <p>Some random text about the rating. Customer satisfaction is important to us.</p>
+                        <a href="#" class="review-link">More reviews</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rating-card">
+                        <h3>Google Rating</h3>
+                        <div class="rating-details">
+                            <img src="./img/google.png" alt="Google" class="icon">
+                            <span class="rating-number">4.8</span>
+                        </div>
+                        <p>Some random text about the rating. Customer satisfaction is important to us.</p>
+                        <a href="#" class="review-link">More reviews</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rating-card">
+                        <h3>Yelp Rating</h3>
+                        <div class="rating-details">
+                            <img src="./img/twitter.png" alt="Yelp" class="icon">
+                            <span class="rating-number">4.6</span>
+                        </div>
+                        <p>Some random text about the rating. Customer satisfaction is important to us.</p>
+                        <a href="#" class="review-link">More reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="image-section mt-5">
+        <h2 class="section-heading">Explore Our Destinations</h2>
+        <div class="container">
+
+            <div class="col-md-4 m-auto ">
+                <button class="btn btn-custom m-2">Button 1</button>
+
+                <button class="btn btn-custom  m-2">Button 2</button>
+
+                <button class="btn btn-custom m-2 ">Button 3</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="image-card">
+                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
+                    <div class="image-overlay">
+                        <div class="overlay-content d-flex flex-row">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#">$525*</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-card">
+                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
+                    <div class="image-overlay">
+                        <div class="overlay-content d-flex flex-row">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#">$525*</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-card">
+                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
+                    <div class="image-overlay">
+                        <div class="overlay-content d-flex flex-row">
+                            <div class="overlay-text">
+                                <h3>Delhi</h3>
+                                <a href="#">Book now</a>
+                            </div>
+                            <div class="overlay-button">
+                                <h4>Fare Starting At</h4>
+                                <a href="#">$525*</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other destinations -->
+        </div>
+    </div>
+    <!-- <div class="container">
+        <h1>News Card</h1>
+        <div class="cardcontainer">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
+                <div class="photos">Photos</div>
+            </div>
+            <div class="content">
+                <p class="txt4">City Lights In Newyork</p>
+                <p class="txt5">A city that never sleeps</p>
+                <p class="txt2">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+            </div>
+            <div class="footer">
+                <p><a class="waves-effect waves-light btn" href="#">Read More</a><a id="heart"><span class="like"><i class="fab fa-gratipay"></i>Like</span></a></p>
+                <p class="txt3"><i class="far fa-clock"></i>10 Minutes Ago <span class="comments"><i class="fas fa-comments"></i>45 Comments</span></p>
+            </div>
+        </div>
+    </div>   -->
+
+    <div class="container popular-flights-section shadow-lg" style="border-radius: 10px;">
+        <div class="flight-buttons p-2">
+            <button class="btn btn-primary ">Round Trip</button>
+            <button class="btn btn-secondary">One Way</button>
+        </div>
+
+        <div class="row flight-cards">
+            <div class="col-md-6">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-6">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mt-3">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mt-3">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container shadow-lg mt-4" style="border-radius: 10px;">
+        <div class="row">
+            <!-- First Column: Heading and Text -->
+            <div class="col-md-6">
+                <div class="section-content">
+                    <h2 class="section-heading font-weight-bold">About Us</h2>
+                    <p class="section-text text-justify">This is some text that provides more detail or context related
+                        to the heading. This can be a description or any relevant information.
+
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae veritatis non ratione
+                        consectetur! Voluptate, id. Est, repellat eos inventore tempore voluptatibus id, natus explicabo
+                        molestiae hic asperiores soluta voluptatem fugiat officia sint aperiam, blanditiis voluptatum
+                        unde veritatis quasi nemo fuga harum sed reprehenderit tenetur! Tenetur aut veritatis quisquam
+                        sunt pariatur rerum. Reprehenderit esse expedita id doloremque voluptatem dolor voluptatibus
+                        totam vero saepe perspiciatis? Esse labore aimilique ducimus quis voluptatibus? Recusandae
+                        obcaecati officiis nam quaerat. Perspiciatis deleniti pariatur voluptati Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Consectetur quae, hic alias nemo velit quia minima, impedit
+                        libero blanditiis fugit aspernatur, recusandae voluptatibus ratione natus sapiente quas
+                        asperiores veritatis vero.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Second Column: Nested Columns -->
+            <div class="col-md-6">
+                <div class="row nested-cols">
+                    <div class="col-md-12 mb-3">
+                        <div class="nested-content">
+                            <h4 class="nested-heading">Easy Flight Search</h4>
+                            <div class="nested-body">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 1" class="nested-image">
+                                <p class="nested-text">Some random text that provides more details about this section.
+                                    This could include additional context or information relevant to the heading.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="nested-content">
+                            <h4 class="nested-heading">100% Secure</h4>
+                            <div class="nested-body">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 2" class="nested-image">
+                                <p class="nested-text">Additional text for this section. This text supports the heading
+                                    and provides more information as needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="nested-content">
+                            <h4 class="nested-heading">24/7 Live Support</h4>
+                            <div class="nested-body">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 3" class="nested-image">
+                                <p class="nested-text">More random text with relevant information. Each section is
+                                    separated and contains an image and descriptive text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================blog================== -->
+    <div class="container-fluid mt-3">
+        <div class="row" id="bg-img">
+            <div class="col-md-6">
+                <h2 class="p-3 text-light">
+                    Why Choose MyTicketsToIndia?
+                </h2>
+                <div>
+                    <p class="text-light text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis, quos blanditiis earum,
+                        odit veniam at praesentium ipsa assumenda totam distinctio eveniet magnam numquam quae molestias
+                        quod placeat, deleniti facere!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis, quos blanditiis earum,
+                        odit veniam at praesentium ipsa assumenda totam distinctio eveniet magnam numquam quae molestias
+                        quod placeat, deleniti facere!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis, quos blanditiis earum,
+                        odit veniam at praesentium ipsa assumenda totam distinctio eveniet magnam numquam quae molestias
+                        quod placeat, deleniti facere!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis, quos blanditiis earum,
+                        odit veniam at praesentium ipsa assumenda totam distinctio eveniet magnam numquam quae molestias
+                        quod placeat, deleniti facere!
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 m-auto d-flex align-content-center justify-content-center flex-column">
+                <div class="row" style="gap: 20px;">
+                    <div class="box col-md-5 flex-column text-center m-1">
+                        <svg style="fill:rgb(69, 69, 234); " xmlns="http://www.w3.org/2000/svg" width="66" height="66"
+                            fill="currentColor" class="bi bi-award-fill " viewBox="0 0 16 16">
+                            <path
+                                d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
+                            <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
+                        </svg>
+                        <p class="font-weight-bold">Certified
+                            Company</p>
+                    </div>
+
+                    <div class="box col-md-5 flex-column text-center m-1">
+                        <svg style="fill:rgb(69, 69, 234); " xmlns="http://www.w3.org/2000/svg" width="66" height="66"
+                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                        <p class="font-weight-bold">Secure
+                            Payment Methods</p>
+                    </div>
+                </div>
+                <div class="row" style="gap:20px;">
+                    <div class="box col-md-5 mt-4 flex-column m-1">
+                        <svg style="fill:rgb(69, 69, 234); height:66px; width:66px" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512">
+                            <path
+                                d="M211.2 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM32 256c0 17.7 14.3 32 32 32l85.6 0c10.1-39.4 38.6-71.5 75.8-86.6c-9.7-6-21.2-9.4-33.4-9.4l-96 0c-35.3 0-64 28.7-64 64zm461.6 32l82.4 0c17.7 0 32-14.3 32-32c0-35.3-28.7-64-64-64l-96 0c-11.7 0-22.7 3.1-32.1 8.6c38.1 14.8 67.4 47.3 77.7 87.4zM391.2 226.4c-6.9-1.6-14.2-2.4-21.6-2.4l-96 0c-8.5 0-16.7 1.1-24.5 3.1c-30.8 8.1-55.6 31.1-66.1 60.9c-3.5 10-5.5 20.8-5.5 32c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32c0-11.2-1.9-22-5.5-32c-10.8-30.7-36.8-54.2-68.9-61.6zM563.2 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM321.6 192a80 80 0 1 0 0-160 80 80 0 1 0 0 160zM32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 416z" />
+                        </svg>
+                        <p class="font-weight-bold text-center">Quick Response
+                            To Queries</p>
+
+                    </div>
+
+                    <div class="box col-md-5 mt-4 flex-column m-1">
+                        <svg style="fill:rgb(69, 69, 234); height:66px; width:66px" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512">
+                            <path
+                                d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM64 80c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L80 96c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16zm128 72c8.8 0 16 7.2 16 16l0 17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5 .1s0 0 0 0s0 0 0 0c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1l0 17.1c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-17.8c-11.2-2.1-21.7-5.7-30.9-8.9c0 0 0 0 0 0c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5 .8 4.8 1.6 7.1 2.4c0 0 0 0 0 0s0 0 0 0s0 0 0 0c13.6 4.6 24.6 8.4 36.3 8.7c9.1 .3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5s0 0 0 0c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7l0-17.3c0-8.8 7.2-16 16-16z" />
+                        </svg>
+                        <p class="font-weight-bold text-center">No Hidden
+                            Charges</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="text-center font-weight-bold p-4">Travel Ticket Deals that are Genuine Steals</h3>
+        <div class="m-3">
+            <div style="height: 2px; background:red; width: 100px;" class="m-auto"></div>
+        </div>
+        <div class="m-auto d-flex justify-content-center align-content-center shadow-lg"
+            style="outline: 2px solid rgb(184, 182, 182); width: fit-content; border-radius: 15px;">
+            <div class="p-2">
+                <button class="btn btn-deal m-2" data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*">
+                    Call-Only Deals
+                </button>
+                <button class="btn btn-deal m-2" data-text="Festive Deals - Huge Discounts for the Holidays!">
+                    Festive Deals
+                </button>
+                <button class="btn btn-deal m-2" data-text="Last-Minute Deals - Book Now and Save Big!">
+                    Last Minute Deals
+                </button>
+                <button class="btn btn-deal m-2" data-text="Group Deals - Special Prices for Group Bookings">
+                    Group Deals
+                </button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <img src="./img/city img.jpg" class="img-fluid rounded shadow" alt="">
+            </div>
+            <div class="col-md-6">
+                <h3 id="deal-text">Phone-Exclusive Deals - Enjoy Up To 40% Off*</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio illo, quibusdam eius
+                    quo perferendis aperiam ab, odit minima repellat ullam reiciendis voluptatem quasi maxime? Ratione
+                    corrupti natus soluta eveniet quis?</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- ===================new letter=============== -->
+    <div class="container mb-5">
+        <div class="row d-flex justify-content-center align-items-center custom-rows m-1">
+            <div class="col-md-6 p-0 m-0">
+                <img class="" style="height: fit-content !important; width: 100%;" src="./img/city img.jpg" alt="">
+
+            </div>
+            <div class="col-md-6">
+                <div class="custom-card">
+                    <div class="text-center">
+                        <img src="./img/background-replacer-result.png
+                    " width="200">
+                        <span class="d-block mt-3">
+                            Subscribe to our newslettedr in order not to miss new arrivals <br>
+                            promotions and discounts of our store
+                        </span>
+                        <div class="mx-5 ">
+                            <div class="input-group mb-3 mt-4 d-flex align-content-between justify-content-center">
+                                <input type="text" class="form-control custom-input" placeholder="Enter email">
+                                <button class="btn btn-successp-1 custom-btn" type="button"
+                                    id="custom-button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ================FAQ section============ -->
+    <div class="container mt-5 shadow-lg">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="accordionLeft">
+                    <!-- FAQ Question 1 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is the baggage allowance for my flight?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
+                            data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Baggage allowance varies by airline and ticket class. Check with your airline for
+                                specific details regarding carry-on and checked baggage.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 2 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How can I change my flight date?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionLeft">
+                            <div class="card-body">
+                                You can change your flight date by contacting the airline directly or through their
+                                website. Fees may apply depending on the fare rules.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 3 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What do I need to bring to the airport?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Bring your boarding pass, ID, and any required travel documents. Ensure you adhere to
+                                security guidelines for liquids and prohibited items.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 4 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Can I select my seat in advance?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Many airlines allow you to select your seat in advance during the booking process or
+                                afterward through their website or app.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 5 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What should I do if my flight is delayed?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                            data-parent="#accordionLeft">
+                            <div class="card-body">
+                                Check the airline’s app or website for updates. You can also contact the airline or
+                                visit their customer service desk at the airport.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="accordionRight">
+                    <!-- FAQ Question 6 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingSix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    How do I get a refund for my flight?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                            data-parent="#accordionRight">
+                            <div class="card-body">
+                                Refund policies vary. You can request a refund through the airline’s website or customer
+                                service. Check the fare rules for eligibility.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 7 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    What is the process for airport security?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                            data-parent="#accordionRight">
+                            <div class="card-body">
+                                At airport security, you need to present your boarding pass and ID, remove belts and
+                                shoes, and place carry-on items in bins for screening.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 8 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Can I bring food on the plane?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                            data-parent="#accordionRight">
+                            <div class="card-body">
+                                Yes, you can bring food through security, but adhere to liquid restrictions. You can
+                                also purchase food at the airport or on board.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 9 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingNine">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    What should I do if I lose my boarding pass?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                            data-parent="#accordionRight">
+                            <div class="card-body">
+                                If you lose your boarding pass, visit the airline’s check-in desk at the airport. They
+                                can reissue a new boarding pass for you.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Question 10 -->
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingTen">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
+                                    data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Can I change my flight itinerary?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen"
+                            data-parent="#accordionRight">
+                            <div class="card-body">
+                                Flight itineraries can often be changed, depending on the fare rules and availability.
+                                Contact the airline directly or use their online platform.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container-fluid bottom_border">
+            <div class="row">
+                <div class="col-sm-4 col-md col-12">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35</p>
+                    <p><i class="fa fa-phone"></i> +91-9999878398</p>
+                    <p><i class="fa fa-envelope"></i> info@example.com</p>
+                </div>
+
+                <div class="col-sm-4 col-md col-6">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <ul class="footer_ul_amrc">
+                        <li><a href="#">Image Rectouching</a></li>
+                        <li><a href="#">Clipping Path</a></li>
+                        <li><a href="#">Hollow Man Montage</a></li>
+                        <li><a href="#">Ebay & Amazon</a></li>
+                        <li><a href="#">Hair Masking/Clipping</a></li>
+                        <li><a href="#">Image Cropping</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-md col-6">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <ul class="footer_ul_amrc">
+                        <li><a href="#">Remove Background</a></li>
+                        <li><a href="#">Shadows & Mirror Reflection</a></li>
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">Vectorization</a></li>
+                        <li><a href="#">Hair Masking/Clipping</a></li>
+                        <li><a href="#">Image Cropping</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-md col-12">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <ul class="footer_ul2_amrc text-center">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing... <a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing... <a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing... <a
+                                    href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <ul class="foote_bottom_ul_amrc d-flex align-content-center justify-content-center flex-wrap">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+
+            <ul class="social_footer_ul d-flex align-content-center justify-content-center">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="javascript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
