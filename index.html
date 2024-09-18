@@ -144,14 +144,14 @@
             </div>
 
             <div class="form-row">
-                <div class="form-group">
+                <div class="form-group  ">
                     <input type="text" id="from-input" class="form-control" required placeholder=" " />
                     <label for="from-input">Flying From</label>
                     <ul id="from-suggestions-list" class="suggestions-list"></ul>
                     <div class="error-message" id="from-alert">Cannot be the same as destination</div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2 mt-md-0">
                     <input type="text" id="to-input" class="form-control" required placeholder=" " />
                     <label for="to-input">Destination</label>
 
@@ -159,20 +159,20 @@
                     <div class="error-message" id="to-alert">Cannot be the same as origin</div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2 mt-md-0">
                     <input type="date" id="departure-input" class="form-control" required placeholder=" " />
                     <label for="departure-input">Departure</label>
                     <div class="error-message" id="departure-error">Select a valid date</div>
                 </div>
 
-                <div class="form-group" id="return-group">
+                <div class="form-group  mt-2 mt-md-0" id="return-group">
                     <input type="date" id="return-input" class="form-control" required placeholder=" " />
                     <label for="return-input">Return</label>
                     <div class="error-message" id="return-error">Select a valid return date</div>
                 </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn-search">Search</button>
+                <div class="form-group text-center mr-2 mr-md-0">
+                    <button type="submit" class="btn-search w-100 ">Search</button>
                 </div>
             </div>
             </form>
@@ -235,6 +235,17 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="rating-card">
+                        <h3>Trust Pilot</h3>
+                        <div class="rating-details">
+                            <img src="./img/plugin-trustpilot.png"  alt="Yelp" class="icon">
+                            <span class="rating-number">4.6</span>
+                        </div>
+                        <p>Some random text about the rating. Customer satisfaction is important to us.</p>
+                        <a href="#" class="review-link">More reviews</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rating-card">
                         <h3>Facebook Rating</h3>
                         <div class="rating-details">
                             <img src="./img/facebook.png" alt="Facebook" class="icon">
@@ -255,17 +266,7 @@
                         <a href="#" class="review-link">More reviews</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="rating-card">
-                        <h3>Yelp Rating</h3>
-                        <div class="rating-details">
-                            <img src="./img/twitter.png" alt="Yelp" class="icon">
-                            <span class="rating-number">4.6</span>
-                        </div>
-                        <p>Some random text about the rating. Customer satisfaction is important to us.</p>
-                        <a href="#" class="review-link">More reviews</a>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -288,63 +289,7 @@
 
 
     </div>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="image-card">
-                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
-                    <div class="image-overlay">
-                        <div class="overlay-content d-flex flex-row">
-                            <div class="overlay-text">
-                                <h3>Delhi</h3>
-                                <a href="#">Book now</a>
-                            </div>
-                            <div class="overlay-button">
-                                <h4>Fare Starting At</h4>
-                                <a href="#">$525*</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="image-card">
-                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
-                    <div class="image-overlay">
-                        <div class="overlay-content d-flex flex-row">
-                            <div class="overlay-text">
-                                <h3>Delhi</h3>
-                                <a href="#">Book now</a>
-                            </div>
-                            <div class="overlay-button">
-                                <h4>Fare Starting At</h4>
-                                <a href="#">$525*</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="image-card">
-                    <img src="./img/city img.jpg" alt="Destination 1" class="img-fluid">
-                    <div class="image-overlay">
-                        <div class="overlay-content d-flex flex-row">
-                            <div class="overlay-text">
-                                <h3>Delhi</h3>
-                                <a href="#">Book now</a>
-                            </div>
-                            <div class="overlay-button">
-                                <h4>Fare Starting At</h4>
-                                <a href="#">$525*</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat for other destinations -->
-        </div>
-    </div>
+   
     <!-- <div class="container">
         <h1>News Card</h1>
         <div class="cardcontainer">
@@ -369,8 +314,149 @@
             <button class="btn btn-primary ">Round Trip</button>
             <button class="btn btn-secondary">One Way</button>
         </div>
+     <!-- =========================    one way trio card=============== -->
+        <div class="row round-trip flight-cards">
+            <div class="col-md-6">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
 
-        <div class="row flight-cards">
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-6">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mt-3">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 mt-3">
+                <a class="text-dark text-decoration-none" href="">
+                    <div class="flight-card p-1">
+                        <div class="flight-info">
+                            <div class="flight-company ">
+                                <div>
+                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                                </div>
+                                <div class="company-details">
+                                    <h5>Air India</h5>
+                                    <p>From: New Delhi</p>
+                                    <p>Time: 10:00 AM</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                                Book Now
+                            </p>
+
+                        </div>
+
+                        <div class="flight-destination text-center">
+                            <p>To: New York</p>
+                            <h4>$1200</h4>
+                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                                Book Now
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- ========================two way trip card==================== -->
+        <div class="row one-way flight-cards">
             <div class="col-md-6">
                 <a class="text-dark text-decoration-none" href="">
                     <div class="flight-card p-1">
@@ -649,41 +735,62 @@
             </div>
         </div>
     </div>
-    <div class="container">
+
+    <!-- ==================button section================ -->
+    <div class="container shadow mt-5" style="overflow: hidden !important;">
         <h3 class="text-center font-weight-bold p-4">Travel Ticket Deals that are Genuine Steals</h3>
         <div class="m-3">
             <div style="height: 2px; background:red; width: 100px;" class="m-auto"></div>
         </div>
         <div class="m-auto d-flex justify-content-center align-content-center shadow-lg"
             style="outline: 2px solid rgb(184, 182, 182); width: fit-content; border-radius: 15px;">
-            <div class="p-2">
-                <button class="btn btn-deal m-2" data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*">
+            <div class="p-2 position-relative" >
+                <button class="btn btn-deal  active " data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*" 
+                        data-img="./img/Last-Minute-Deals.jpg"
+                        data-desc="Get up to 40% off when you book through our exclusive phone deals. Call now to grab the offer!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
                     Call-Only Deals
                 </button>
-                <button class="btn btn-deal m-2" data-text="Festive Deals - Huge Discounts for the Holidays!">
+               
+                
+                <button class="btn btn-deal mt-2 mt-md-0" data-text="Festive Deals - Huge Discounts for the Holidays!" 
+                        data-img="./img/Firefly Festive Deals 90524.jpg"
+                        data-desc="Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. T    ">
+                      
                     Festive Deals
+                  
                 </button>
-                <button class="btn btn-deal m-2" data-text="Last-Minute Deals - Book Now and Save Big!">
+               
+                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Last-Minute Deals - Book Now and Save Big!" 
+                        data-img="./img/Last-Minute-Deals.jpg"
+                        data-desc="Hurry up! Grab our last-minute deals and enjoy big savings on your flights. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus v   ">
                     Last Minute Deals
                 </button>
-                <button class="btn btn-deal m-2" data-text="Group Deals - Special Prices for Group Bookings">
+               
+                
+             
+                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Group Deals - Special Prices for Group Bookings" 
+                        data-img="./img/Group-Deals.jpg"
+                        data-desc="Travel with friends or family and get special group booking prices for your trips. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
                     Group Deals
                 </button>
+                
+
+              
+                <!-- Underline -->
+                <div class="underline"></div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <img src="./img/city img.jpg" class="img-fluid rounded shadow" alt="">
+        <div class="row mt-3 shadow-lg" style="border-radius: 15px;">
+            <div class="col-md-6 ">
+                <img src="./img/Group-Deals.jpg" id="deal-image" class="img-fluid rounded  d-block  w-100 h-100 p-2" alt="Deal Image">
             </div>
             <div class="col-md-6">
                 <h3 id="deal-text">Phone-Exclusive Deals - Enjoy Up To 40% Off*</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio illo, quibusdam eius
-                    quo perferendis aperiam ab, odit minima repellat ullam reiciendis voluptatem quasi maxime? Ratione
-                    corrupti natus soluta eveniet quis?</p>
+                <p id="deal-desc" class="text-justify">Get up to 40% off when you book through our exclusive phone deals. Call now to grab the offer!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia    </p>
             </div>
         </div>
-    </div>
-    
+    </div>  
+
 
     <!-- ===================new letter=============== -->
     <div class="container mb-5">

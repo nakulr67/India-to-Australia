@@ -288,10 +288,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-$(document).ready(function(){
-    document.getElementById("heart").onclick = function(){
-        document.querySelector(".fa-gratipay").style.color = "#E74C3C";
-    };
-});
+// $(document).ready(function(){
+//     document.getElementById("heart").onclick = function(){
+//         document.querySelector(".fa-gratipay").style.color = "#E74C3C";
+//     };
+// });
 
 // =====================flight blog-detail section================
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.btn-deal');
+    const dealText = document.getElementById('deal-text');
+    const dealImage = document.getElementById('deal-image');
+    const dealDesc = document.getElementById('deal-desc');
+    const underline = document.querySelector('.underline');
+
+    // Check if underline exists
+    if (underline) {
+        // Set the default active button underline
+        const activeButton = document.querySelector('.btn-deal.active');
+        if (activeButton) {
+            underline.style.width = `${activeButton.offsetWidth}px`;
+            underline.style.left = `${activeButton.offsetLeft}px`;
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const newText = this.getAttribute('data-text');
+                const newImage = this.getAttribute('data-img');
+                const newDesc = this.getAttribute('data-desc');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                // Animate underline from right to left
+                underline.style.transition = 'none';
+                underline.style.width = `${this.offsetWidth}px`;
+                underline.style.left = `${this.offsetLeft + this.offsetWidth}px`;
+
+                setTimeout(() => {
+                    underline.style.transition = 'left 0.4s ease, width 0.4s ease';
+                    underline.style.left = `${this.offsetLeft}px`;
+                }, 10);
+
+                // Animate text and image (slide effect)
+                dealText.style.transform = 'translateX(100%)';
+                dealDesc.style.transform = 'translateX(100%)';
+                dealImage.style.transform = 'translateX(100%)';
+                dealText.style.opacity = '0';
+                dealDesc.style.opacity = '0';
+                dealImage.style.opacity = '0';
+
+                setTimeout(() => {
+                    dealText.textContent = newText;
+                    dealDesc.textContent = newDesc;
+                    dealImage.src = newImage;
+
+                    // Slide in the new text and image
+                    dealText.style.transform = 'translateX(0)';
+                    dealDesc.style.transform = 'translateX(0)';
+                    dealImage.style.transform = 'translateX(0)';
+                    dealText.style.opacity = '1';
+                    dealDesc.style.opacity = '1';
+                    dealImage.style.opacity = '1';
+                }, 400);
+            });
+        });
+
+        // On window resize, adjust the underline position
+        window.addEventListener('resize', function () {
+            const activeButton = document.querySelector('.btn-deal.active');
+            if (activeButton) {
+                underline.style.width = `${activeButton.offsetWidth}px`;
+                underline.style.left = `${activeButton.offsetLeft}px`;
+            }
+        });
+    } else {
+        console.warn('Underline element not found.');
+    }
+});
