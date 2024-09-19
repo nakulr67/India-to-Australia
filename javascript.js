@@ -366,3 +366,42 @@ document.addEventListener('DOMContentLoaded', function () {
         console.warn('Underline element not found.');
     }
 });
+// ======================ticket card====================
+const roundTripBtn = document.getElementById('roundTripBtn');
+        const oneWayBtn = document.getElementById('oneWayBtn');
+
+        const prices = [
+            { element: document.getElementById('price1'), roundTrip: '$1200', oneWay: '$700' },
+            { element: document.getElementById('price2'), roundTrip: '$1400', oneWay: '$900' },
+            { element: document.getElementById('price3'), roundTrip: '$900', oneWay: '$600' },
+            { element: document.getElementById('price4'), roundTrip: '$1000', oneWay: '$750' },
+            { element: document.getElementById('price5'), roundTrip: '$1600', oneWay: '$1100' }
+        ];
+
+        roundTripBtn.addEventListener('click', () => {
+            handleButtonClick(roundTripBtn, oneWayBtn, 'roundTrip');
+        });
+
+        oneWayBtn.addEventListener('click', () => {
+            handleButtonClick(oneWayBtn, roundTripBtn, 'oneWay');
+        });
+
+        function handleButtonClick(activeBtn, inactiveBtn, tripType) {
+            // Change button background
+            activeBtn.classList.add('active');
+            inactiveBtn.classList.remove('active');
+
+            // Update prices with animation
+            prices.forEach(price => {
+                price.element.classList.add('zoom-out');
+                setTimeout(() => {
+                    price.element.innerHTML = tripType === 'roundTrip' ? price.roundTrip : price.oneWay;
+                    price.element.classList.remove('zoom-out');
+                    price.element.classList.add('zoom-in');
+                }, 300);
+
+                setTimeout(() => {
+                    price.element.classList.remove('zoom-in');
+                }, 600);
+            });
+        }

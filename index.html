@@ -237,7 +237,7 @@
                     <div class="rating-card">
                         <h3>Trust Pilot</h3>
                         <div class="rating-details">
-                            <img src="./img/plugin-trustpilot.png"  alt="Yelp" class="icon">
+                            <img src="./img/plugin-trustpilot.png" alt="Yelp" class="icon">
                             <span class="rating-number">4.6</span>
                         </div>
                         <p>Some random text about the rating. Customer satisfaction is important to us.</p>
@@ -266,7 +266,7 @@
                         <a href="#" class="review-link">More reviews</a>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -289,7 +289,7 @@
 
 
     </div>
-   
+
     <!-- <div class="container">
         <h1>News Card</h1>
         <div class="cardcontainer">
@@ -308,84 +308,14 @@
             </div>
         </div>
     </div>   -->
-
+   
     <div class="container popular-flights-section shadow-lg" style="border-radius: 10px;">
         <div class="flight-buttons p-2">
-            <button class="btn btn-primary ">Round Trip</button>
-            <button class="btn btn-secondary">One Way</button>
+            <button class="btn btn-primary shadow-none border-0 active " id="roundTripBtn">Round Trip</button>
+            <button class="btn btn-secondary shadow-none border-0" id="oneWayBtn">One Way</button>
         </div>
-     <!-- =========================    one way trio card=============== -->
+        <!-- =========================    one way trio card=============== -->
         <div class="row round-trip flight-cards">
-            <div class="col-md-6">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
-
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-md-6">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
-
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
             <div class="col-md-6 mt-3">
                 <a class="text-dark text-decoration-none" href="">
                     <div class="flight-card p-1">
@@ -412,7 +342,7 @@
 
                         <div class="flight-destination text-center">
                             <p>To: New York</p>
-                            <h4>$1200</h4>
+                            <h4  id="price1">$1200</h4>
                             <p class="font-weight-bolder d-block d-md-none d-lg-none">
                                 Book Now
                             </p>
@@ -429,8 +359,8 @@
                                     <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
                                 </div>
                                 <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
+                                    <h5>Jet Airways</h5>
+                                    <p>From: Mumbai</p>
                                     <p>Time: 10:00 AM</p>
                                 </div>
 
@@ -445,8 +375,8 @@
                         </div>
 
                         <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
+                            <p>To: London</p>
+                            <h4 id="price2">$1200</h4>
                             <p class="font-weight-bolder d-block d-md-none d-lg-none">
                                 Book Now
                             </p>
@@ -455,9 +385,9 @@
                 </a>
             </div>
         </div>
-        <!-- ========================two way trip card==================== -->
+
         <div class="row one-way flight-cards">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-3">
                 <a class="text-dark text-decoration-none" href="">
                     <div class="flight-card p-1">
                         <div class="flight-info">
@@ -466,8 +396,8 @@
                                     <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
                                 </div>
                                 <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
+                                    <h5>Emirates</h5>
+                                    <p>From: Hyderabad</p>
                                     <p>Time: 10:00 AM</p>
                                 </div>
 
@@ -482,44 +412,8 @@
                         </div>
 
                         <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-md-6">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
-
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
+                            <p>To: Paris</p>
+                            <h4 id="price3">$1200</h4>
                             <p class="font-weight-bolder d-block d-md-none d-lg-none">
                                 Book Now
                             </p>
@@ -553,41 +447,7 @@
 
                         <div class="flight-destination text-center">
                             <p>To: New York</p>
-                            <h4>$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 mt-3">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
-
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4>$1200</h4>
+                            <h4 id="price4">$1200</h4>
                             <p class="font-weight-bolder d-block d-md-none d-lg-none">
                                 Book Now
                             </p>
@@ -744,52 +604,61 @@
         </div>
         <div class="m-auto d-flex justify-content-center align-content-center shadow-lg"
             style="outline: 2px solid rgb(184, 182, 182); width: fit-content; border-radius: 15px;">
-            <div class="p-2 position-relative" >
-                <button class="btn btn-deal  active " data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*" 
-                        data-img="./img/Last-Minute-Deals.jpg"
-                        data-desc="Get up to 40% off when you book through our exclusive phone deals. Call now to grab the offer!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
+            <div class="p-2 position-relative">
+                <button class="btn btn-deal  active " data-text="Phone-Exclusive Deals - Enjoy Up To 40% Off*"
+                    data-img="./img/Last-Minute-Deals.jpg"
+                    data-desc="Get up to 40% off when you book through our exclusive phone deals. Call now to grab the offer!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
                     Call-Only Deals
                 </button>
-               
-                
-                <button class="btn btn-deal mt-2 mt-md-0" data-text="Festive Deals - Huge Discounts for the Holidays!" 
-                        data-img="./img/Firefly Festive Deals 90524.jpg"
-                        data-desc="Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. T    ">
-                      
+
+
+                <button class="btn btn-deal mt-2 mt-md-0" data-text="Festive Deals - Huge Discounts for the Holidays!"
+                    data-img="./img/Firefly Festive Deals 90524.jpg"
+                    data-desc="Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. T    ">
+
                     Festive Deals
-                  
+
                 </button>
-               
-                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Last-Minute Deals - Book Now and Save Big!" 
-                        data-img="./img/Last-Minute-Deals.jpg"
-                        data-desc="Hurry up! Grab our last-minute deals and enjoy big savings on your flights. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus v   ">
+
+                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Last-Minute Deals - Book Now and Save Big!"
+                    data-img="./img/Last-Minute-Deals.jpg"
+                    data-desc="Hurry up! Grab our last-minute deals and enjoy big savings on your flights. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus v   ">
                     Last Minute Deals
                 </button>
-               
-                
-             
-                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Group Deals - Special Prices for Group Bookings" 
-                        data-img="./img/Group-Deals.jpg"
-                        data-desc="Travel with friends or family and get special group booking prices for your trips. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
+
+
+
+                <button class="btn btn-deal mt-2 mt-md-0 " data-text="Group Deals - Special Prices for Group Bookings"
+                    data-img="./img/Group-Deals.jpg"
+                    data-desc="Travel with friends or family and get special group booking prices for your trips. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus   ">
                     Group Deals
                 </button>
-                
 
-              
+
+
                 <!-- Underline -->
                 <div class="underline"></div>
             </div>
         </div>
         <div class="row mt-3 shadow-lg" style="border-radius: 15px;">
             <div class="col-md-6 ">
-                <img src="./img/Group-Deals.jpg" id="deal-image" class="img-fluid rounded  d-block  w-100 h-100 p-2" alt="Deal Image">
+                <img src="./img/Group-Deals.jpg" id="deal-image" class="img-fluid rounded  d-block  w-100 h-100 p-2"
+                    alt="Deal Image">
             </div>
             <div class="col-md-6">
                 <h3 id="deal-text">Phone-Exclusive Deals - Enjoy Up To 40% Off*</h3>
-                <p id="deal-desc" class="text-justify">Get up to 40% off when you book through our exclusive phone deals. Call now to grab the offer!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur!  discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus voluptatem saepe, mollitia    </p>
+                <p id="deal-desc" class="text-justify">Get up to 40% off when you book through our exclusive phone
+                    deals. Call now to grab the offer! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla placeat ea
+                    blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! Celebrate the festive season with
+                    massive discounts on your favorite destinations! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Tempore voluptatibus voluptatem saepe, mollitia suscipit qui ab? In, facilis odit nulla
+                    placeat ea blanditiis eos deleniti. Quasi adipisci earum beatae tenetur! discounts on your favorite
+                    destinations! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus
+                    voluptatem saepe, mollitia </p>
             </div>
         </div>
-    </div>  
+    </div>
 
 
     <!-- ===================new letter=============== -->
@@ -824,198 +693,81 @@
 
 
     <!-- ================FAQ section============ -->
-    <div class="container mt-5 shadow-lg">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div id="accordionLeft">
-                    <!-- FAQ Question 1 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is the baggage allowance for my flight?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
-                            data-parent="#accordionLeft">
-                            <div class="card-body">
-                                Baggage allowance varies by airline and ticket class. Check with your airline for
-                                specific details regarding carry-on and checked baggage.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 2 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How can I change my flight date?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionLeft">
-                            <div class="card-body">
-                                You can change your flight date by contacting the airline directly or through their
-                                website. Fees may apply depending on the fare rules.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 3 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What do I need to bring to the airport?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionLeft">
-                            <div class="card-body">
-                                Bring your boarding pass, ID, and any required travel documents. Ensure you adhere to
-                                security guidelines for liquids and prohibited items.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 4 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Can I select my seat in advance?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                            data-parent="#accordionLeft">
-                            <div class="card-body">
-                                Many airlines allow you to select your seat in advance during the booking process or
-                                afterward through their website or app.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 5 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    What should I do if my flight is delayed?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                            data-parent="#accordionLeft">
-                            <div class="card-body">
-                                Check the airline’s app or website for updates. You can also contact the airline or
-                                visit their customer service desk at the airport.
-                            </div>
-                        </div>
-                    </div>
+     <div style="      background-color: black !important;">
+    <div class="container" >
+        <h1 class="text-center text-light">FAQ</h1>
+        <div class="accordion mb-0" id="accordionExample">
+          <div class="item">
+             <div class="item-header" id="headingOne">
+                <h2 class="mb-0">
+                   <button class="btn btn-link" type="button" data-toggle="collapse"
+                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   Collapsible Item #1
+                   <i class="fa fa-angle-down"></i>
+                   </button>
+                </h2>
+             </div>
+             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="t-p">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div id="accordionRight">
-                    <!-- FAQ Question 6 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingSix">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    How do I get a refund for my flight?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                            data-parent="#accordionRight">
-                            <div class="card-body">
-                                Refund policies vary. You can request a refund through the airline’s website or customer
-                                service. Check the fare rules for eligibility.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 7 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingSeven">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    What is the process for airport security?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
-                            data-parent="#accordionRight">
-                            <div class="card-body">
-                                At airport security, you need to present your boarding pass and ID, remove belts and
-                                shoes, and place carry-on items in bins for screening.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 8 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingEight">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    Can I bring food on the plane?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
-                            data-parent="#accordionRight">
-                            <div class="card-body">
-                                Yes, you can bring food through security, but adhere to liquid restrictions. You can
-                                also purchase food at the airport or on board.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 9 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingNine">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                    What should I do if I lose my boarding pass?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
-                            data-parent="#accordionRight">
-                            <div class="card-body">
-                                If you lose your boarding pass, visit the airline’s check-in desk at the airport. They
-                                can reissue a new boarding pass for you.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Question 10 -->
-                    <div class="card mb-3">
-                        <div class="card-header" id="headingTen">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link text-decoration-none shadow-none" data-toggle="collapse"
-                                    data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                    Can I change my flight itinerary?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTen" class="collapse" aria-labelledby="headingTen"
-                            data-parent="#accordionRight">
-                            <div class="card-body">
-                                Flight itineraries can often be changed, depending on the fare rules and availability.
-                                Contact the airline directly or use their online platform.
-                            </div>
-                        </div>
-                    </div>
+             </div>
+          </div>
+          <div class="item">
+             <div class="item-header" id="headingTwo">
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   Collapsible Item #2
+                   <i class="fa fa-angle-down"></i>
+                   </button>
+                </h2>
+             </div>
+             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                data-parent="#accordionExample">
+                <div class="t-p">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                 </div>
-            </div>
+             </div>
+          </div>
+          <div class="item">
+             <div class="item-header" id="headingThree">
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false"
+                      aria-controls="collapseThree">
+                   Collapsible Item #3
+                   <i class="fa fa-angle-down"></i>
+                   </button>
+                </h2>
+             </div>
+             <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                data-parent="#accordionExample">
+                <div class="t-p">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </div>
+             </div>
+          </div>
+          <div class="item mb-0">
+             <div class="item-header mb-0" id="headingFour">
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseFour" aria-expanded="false"
+                      aria-controls="collapseFour">
+                   Collapsible Item #4
+                   <i class="fa fa-angle-down"></i>
+                   </button>
+                </h2>
+             </div>
+             <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                data-parent="#accordionExample">
+                <div class="t-p mb-3 " style="height: fit-content !important;">
+                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
+                </div>
+             </div>
+          </div>
+        </div>
         </div>
     </div>
 

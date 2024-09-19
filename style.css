@@ -753,6 +753,36 @@ body {
     align-items: center;
     /* margin-top: 20px; */
 }
+.flight-destination h4 {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.flight-destination h4.zoom-out {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.flight-destination h4.zoom-in {
+    transform: scale(1);
+    opacity: 1;
+}
+.flight-buttons button.active {
+    background-color: rgb(0, 0, 0) !important;
+    color: white;
+}
+.flight-buttons button {
+    background-color: lightblue; /* Default background color for inactive buttons */
+    color: darkblue; /* Default text color for inactive buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding for better spacing */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+.flight-buttons button.active {
+    background-color: #003366; /* Deep Blue for active button */
+    color: white; /* White text for active button */
+}
 
 
 
@@ -987,65 +1017,68 @@ body {
 
 /* =================blog============ */
 
-/* ============FAQ section============== */
-.faq-section {
-    padding: 30px;
-    background-color: #e9ecef;
-    /* Light grey background */
-}
+/* ==================FAQ=================== */
 
-.card {
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.card-header {
-    background-color: #003366;
-    /* Navy blue background for header */
-    color: white;
-    border-radius: 10px;
-
-
-}
-
-.card-header h5 {
-    margin-bottom: 0;
-}
-
-.card-header .btn-link {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    /* text-decoration: none;
-    box-shadow: none; */
-}
-
-.card-header .btn-link:hover {
-    text-decoration: underline;
-    background-color: #002244;
-    /* Darker navy on hover */
-}
-
-.card-body {
-    background-color: #ffffff;
-    /* White background for content */
-    border: 1px solid #dee2e6;
-    /* Light grey border */
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-.collapse.show {
-    transition: height 0.35s ease;
-}
-
+.accordion{
+    margin: 40px 0;
+  }
+  .accordion .item {
+      border: none;
+      margin-bottom: 50px;
+      background: none;
+  }
+  .t-p{
+    color: rgb(193 206 216);
+    padding: 40px 30px 0px 30px;
+  }
+  .accordion .item .item-header h2 button.btn.btn-link {
+      background: #333435;
+      color: white;
+      border-radius: 0px;
+      font-family: 'Poppins';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2.5;
+      text-decoration: none;
+  }
+  .accordion .item .item-header {
+      border-bottom: none;
+      background: transparent;
+      padding: 0px;
+      margin: 2px;
+  }
+  
+  .accordion .item .item-header h2 button {
+      color: white;
+      font-size: 20px;
+      padding: 15px;
+      display: block;
+      width: 100%;
+      text-align: left;
+  }
+  
+  .accordion .item .item-header h2 i {
+      float: right;
+      font-size: 30px;
+      color: #eca300;
+      background-color: black !important;
+      width: 60px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+  }
+  
+  button.btn.btn-link.collapsed i {
+      transform: rotate(0deg);
+  }
+  
+  button.btn.btn-link i {
+      transform: rotate(180deg);
+      transition: 0.5s;
+  }
+  
 /* ==============footer============== */
 /* .footer-02 .subscribe-form .form-group input {
     background: transparent !important;
