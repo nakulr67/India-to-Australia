@@ -913,7 +913,7 @@ body {
     padding: 30px;
     max-width: 900px;
     margin: 50px auto;
-    display: flex;
+    
     align-items: center;
     justify-content: space-between;
 }
