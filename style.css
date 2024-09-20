@@ -906,55 +906,65 @@ body {
 }
 
 /* ============newa letter============ */
-
-
-.custom-input {
-    display: block;
+.newsletter-container {
+    background-image: url(./img/blue-bg.jpg);
+    background-color: #d0e1ff;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.newsletter-text {
+    text-align: center;
+}
+.newsletter-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.newsletter-form input[type="email"] {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.newsletter-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.newsletter-form .form-check {
+    margin-bottom: 10px;
+}
+/* .newsletter-form .btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+} */
+/* .newsletter-form .btn:hover {
+    background-color: #155ab6;
+} */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: calc(1.5em + .75rem + 2px);
-    padding: .575rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 52px;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
 }
-
-.custom-card {
-    padding: 20px;
-    background-color: #eee;
-    padding-bottom: 50px;
-    padding-top: 50px;
+.input-group-text {
+ height : 45px !important;
 }
-
-.custom-input:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #f9a826;
-    outline: 0;
-    box-shadow: none;
-}
-
-.custom-btn {
-    top: 0px;
-    border-top-right-radius: 28px;
-    border-bottom-right-radius: 28px;
-    color: #fff;
-    background-color: #f9a826;
-    border-color: #f9a826;
-    /* padding-top: -20px !important; */
-    /* margin-bottom: 29px; */
-}
-
-.custom-btn:hover {
-    background-color: #f9a826;
-    border-color: #f9a826;
-}
-
 /* ===================about us text============== */
 .section-content {
     padding: 20px;
@@ -1015,7 +1025,6 @@ body {
     }
 }
 
-/* =================blog============ */
 
 /* ==================FAQ=================== */
 
