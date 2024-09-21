@@ -293,6 +293,9 @@ body {
     .form-group label{
         height: 10px !important;
     }
+    .heading{
+        font-size: larger !important;
+    }
 }
 
 /* ===============flight section========================== */
@@ -966,6 +969,12 @@ body {
  height : 45px !important;
 }
 /* ===================about us text============== */
+.divider {
+    border-left: 2px solid #d02828 !important;
+    height: 100%;
+    margin: 0 20px;
+    width: 4px;
+}
 .section-content {
     padding: 20px;
     border-bottom: 2px solid #007bff;
@@ -1025,6 +1034,38 @@ body {
     }
 }
 
+/* ==============img================= */
+.banner1 {
+    /* background-color: #e6f0f8; */
+    background-image: url(./img/White\ and\ Blue\ Artist\ LinkedIn\ Background\ Photo.png);
+    background-size: 100% 100%;
+    padding: 20px;
+    border-radius: 10px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-text1 {
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+}
+.banner-button1 {
+    background-color: #003366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.banner-button1:hover {
+    background-color: #002244;
+}
+.banner-image {
+    border-radius: 50%;
+}
+
 
 /* ==================FAQ=================== */
 
@@ -1039,6 +1080,7 @@ body {
   .t-p{
     color: rgb(193 206 216);
     padding: 40px 30px 0px 30px;
+    text-align: justify;
   }
   .accordion .item .item-header h2 button.btn.btn-link {
       background: #333435;

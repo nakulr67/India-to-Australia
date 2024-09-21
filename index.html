@@ -272,8 +272,8 @@
     </div>
 
 
-    <div class="image-section mt-5">
-        <h2 class="section-heading">Explore Our Destinations</h2>
+    <!-- <div class="image-section mt-5">
+       
         <div class="container">
 
             <div class="col-md-4 m-auto ">
@@ -288,7 +288,7 @@
 
 
 
-    </div>
+    </div> -->
 
     <!-- <div class="container">
         <h1>News Card</h1>
@@ -310,8 +310,9 @@
     </div>   -->
 
     <div class="container popular-flights-section shadow-lg" style="border-radius: 10px;">
-        <div class="flight-buttons p-2">
-            <button class="btn btn-primary shadow-none border-0 active " id="roundTripBtn">Round Trip</button>
+        <h2 class="section-heading text-center p-3 heading">Explore Our Destinations</h2>
+        <div class="flight-buttons text-center text-md-left p-2">
+            <button class="btn btn-primary shadow-none border-0  active " id="roundTripBtn">Round Trip</button>
             <button class="btn btn-secondary shadow-none border-0" id="oneWayBtn">One Way</button>
         </div>
         <!-- =========================    one way trio card=============== -->
@@ -464,7 +465,9 @@
             <!-- First Column: Heading and Text -->
             <div class="col-md-6">
                 <div class="section-content">
-                    <h2 class="section-heading font-weight-bold">About Us</h2>
+                    <div class="divider">
+                    </div>
+                    <h2 class="section-heading font-weight-bold text-center text-md-left">About Us</h2>
                     <p class="section-text text-justify">This is some text that provides more detail or context related
                         to the heading. This can be a description or any relevant information.
 
@@ -483,41 +486,58 @@
                 </div>
             </div>
 
+
             <!-- Second Column: Nested Columns -->
             <div class="col-md-6">
                 <div class="row nested-cols">
                     <div class="col-md-12 mb-3">
                         <div class="nested-content">
-                            <h4 class="nested-heading">Easy Flight Search</h4>
-                            <div class="nested-body">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 1" class="nested-image">
-                                <p class="nested-text">Some random text that provides more details about this section.
+                            <h4 class="nested-heading text-center text-md-left">Easy Flight Search</h4>
+                            <div class="nested-body flex-column flex-md-row text-center">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 1" class="nested-image m-auto">
+                                <p class="nested-text text-justify">Some random text that provides more details about this section.
                                     This could include additional context or information relevant to the heading.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mb-3">
                         <div class="nested-content">
-                            <h4 class="nested-heading">100% Secure</h4>
-                            <div class="nested-body">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 2" class="nested-image">
-                                <p class="nested-text">Additional text for this section. This text supports the heading
+                            <h4 class="nested-heading text-center text-md-left">100% Secure</h4>
+                            <div class="nested-body flex-column flex-md-row text-center">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 2" class="nested-image m-auto">
+                                <p class="nested-text text-justify">Additional text for this section. This text supports the heading
                                     and provides more information as needed.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 mb-3">
                         <div class="nested-content">
-                            <h4 class="nested-heading">24/7 Live Support</h4>
-                            <div class="nested-body">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 3" class="nested-image">
-                                <p class="nested-text">More random text with relevant information. Each section is
+                            <h4 class="nested-heading text-center text-md-left">24/7 Live Support</h4>
+                            <div class="nested-body flex-column flex-md-row text-center">
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 3" class="nested-image m-auto">
+                                <p class="nested-text text-justify">More random text with relevant information. Each section is
                                     separated and contains an image and descriptive text</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- ==================img================= -->
+    <div class=" mt-4 p-3 ">
+        <div class="banner1 container shadow-lg d-md-flex p-3 text-center ">
+            <div class="banner-text1">
+                Exclusive &amp; Unpublished Great Deals Are Here! Where Are You?
+            </div>
+            <button class="banner-button1 m-3">
+                Request A Callback Now!
+            </button>
+            <img alt="Smiling customer service representative with a headset" class="banner-image shadow-lg "
+                height="100"
+                src="./img/calling -girl-img.jpg"
+                width="100" />
         </div>
     </div>
 
@@ -777,7 +797,8 @@
         <div class="newsletter-form">
             <form>
                 <div class="input-group mb-3 d-flex">
-                    <span class="input-group-text d-none d-md-block" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                    <span class="input-group-text d-none d-md-block" id="basic-addon1"><i
+                            class="fas fa-envelope"></i></span>
                     <input type="email" class="form-control" placeholder="Enter Email" aria-label="Email"
                         aria-describedby="basic-addon1">
                 </div>
