@@ -71,6 +71,7 @@
             </a>
         </div>
     </nav>
+
     <div class="banner">
         <div>
             <h1>Book Your Flights Now</h1>
@@ -178,6 +179,75 @@
             </form>
         </div>
     </div>
+    <!-- Button to trigger the modal -->
+
+
+    <!-- Modal -->
+
+
+    <!-- Modal -->
+    <div class="modal" id="bookingModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Close button -->
+                <span class="close" id="closeModalBtn">&times;</span>
+
+                <!-- Tab navigation -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Round Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">One Way</a>
+                    </li>
+                </ul>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="from" class="form-label">From*</label>
+                                <input type="text" class="form-control" id="from" placeholder="City or airport">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="to" class="form-label">To*</label>
+                                <input type="text" class="form-control" id="to" placeholder="BLR - Bengaluru, Kempegc">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="departure" class="form-label">Departure*</label>
+                                <input type="text" class="form-control" id="departure" placeholder="23 Sep 24">
+                            </div>
+                            <div class="col">
+                                <label for="return" class="form-label">Return*</label>
+                                <input type="text" class="form-control" id="return" placeholder="30 Sep 24">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Id</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email*">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="phone" class="form-label">Mobile No.</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Phone*">
+                            </div>
+                            <div class="col">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
     <!-- <div class="image-section">
         <h2 class="section-heading">Explore Our Destinations</h2>
         <div class="container">
@@ -318,143 +388,143 @@
         <!-- =========================    one way trio card=============== -->
         <div class="row round-trip flight-cards">
             <div class="col-md-6 mt-3">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
 
+                <div class="flight-card p-1 open-modal" >
+                    <div class="flight-info">
+                        <div class="flight-company ">
+                            <div>
+                                <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                            </div>
+                            <div class="company-details">
+                                <h5>Air India</h5>
+                                <p>From: New Delhi</p>
+                                <p>Time: 10:00 AM</p>
                             </div>
 
                         </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
 
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4 id="price1">$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
                     </div>
-                </a>
+                    <div>
+                        <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                            Book Now
+                        </p>
+
+                    </div>
+
+                    <div class="flight-destination text-center">
+                        <p>To: New York</p>
+                        <h4 id="price1">$1200</h4>
+                        <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                            Book Now
+                        </p>
+                    </div>
+                </div>
+
             </div>
             <div class="col-md-6 mt-3">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Jet Airways</h5>
-                                    <p>From: Mumbai</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
 
+                <div class="flight-card p-1 open-modal" >
+                    <div class="flight-info">
+                        <div class="flight-company ">
+                            <div>
+                                <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                            </div>
+                            <div class="company-details">
+                                <h5>Jet Airways</h5>
+                                <p>From: Mumbai</p>
+                                <p>Time: 10:00 AM</p>
                             </div>
 
                         </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
 
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: London</p>
-                            <h4 id="price2">$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
                     </div>
-                </a>
+                    <div>
+                        <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                            Book Now
+                        </p>
+
+                    </div>
+
+                    <div class="flight-destination text-center">
+                        <p>To: London</p>
+                        <h4 id="price2">$1200</h4>
+                        <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                            Book Now
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="row one-way flight-cards">
             <div class="col-md-6 mt-3">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Emirates</h5>
-                                    <p>From: Hyderabad</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
 
+                <div class="flight-card p-1 open-modal">
+                    <div class="flight-info">
+                        <div class="flight-company ">
+                            <div>
+                                <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                            </div>
+                            <div class="company-details">
+                                <h5>Emirates</h5>
+                                <p>From: Hyderabad</p>
+                                <p>Time: 10:00 AM</p>
                             </div>
 
                         </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
 
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: Paris</p>
-                            <h4 id="price3">$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
                     </div>
-                </a>
+                    <div>
+                        <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                            Book Now
+                        </p>
+
+                    </div>
+
+                    <div class="flight-destination text-center">
+                        <p>To: Paris</p>
+                        <h4 id="price3">$1200</h4>
+                        <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                            Book Now
+                        </p>
+                    </div>
+                </div>
+
             </div>
             <div class="col-md-6 mt-3">
-                <a class="text-dark text-decoration-none" href="">
-                    <div class="flight-card p-1">
-                        <div class="flight-info">
-                            <div class="flight-company ">
-                                <div>
-                                    <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
-                                </div>
-                                <div class="company-details">
-                                    <h5>Air India</h5>
-                                    <p>From: New Delhi</p>
-                                    <p>Time: 10:00 AM</p>
-                                </div>
 
+                <div class="flight-card p-1 open-modal">
+                    <div class="flight-info">
+                        <div class="flight-company ">
+                            <div>
+                                <img src="./img/airplane_2200326.png" alt="Company Logo" class="company-logo">
+                            </div>
+                            <div class="company-details">
+                                <h5>Air India</h5>
+                                <p>From: New Delhi</p>
+                                <p>Time: 10:00 AM</p>
                             </div>
 
                         </div>
-                        <div>
-                            <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
-                                Book Now
-                            </p>
 
-                        </div>
-
-                        <div class="flight-destination text-center">
-                            <p>To: New York</p>
-                            <h4 id="price4">$1200</h4>
-                            <p class="font-weight-bolder d-block d-md-none d-lg-none">
-                                Book Now
-                            </p>
-                        </div>
                     </div>
-                </a>
+                    <div>
+                        <p class="font-weight-bolder book-text d-none d-md-block d-lg-block">
+                            Book Now
+                        </p>
+
+                    </div>
+
+                    <div class="flight-destination text-center">
+                        <p>To: New York</p>
+                        <h4 id="price4">$1200</h4>
+                        <p class="font-weight-bolder d-block d-md-none d-lg-none">
+                            Book Now
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -494,8 +564,10 @@
                         <div class="nested-content">
                             <h4 class="nested-heading text-center text-md-left">Easy Flight Search</h4>
                             <div class="nested-body flex-column flex-md-row text-center">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 1" class="nested-image m-auto">
-                                <p class="nested-text text-justify">Some random text that provides more details about this section.
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 1"
+                                    class="nested-image m-auto">
+                                <p class="nested-text text-justify">Some random text that provides more details about
+                                    this section.
                                     This could include additional context or information relevant to the heading.</p>
                             </div>
                         </div>
@@ -504,8 +576,10 @@
                         <div class="nested-content">
                             <h4 class="nested-heading text-center text-md-left">100% Secure</h4>
                             <div class="nested-body flex-column flex-md-row text-center">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 2" class="nested-image m-auto">
-                                <p class="nested-text text-justify">Additional text for this section. This text supports the heading
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 2"
+                                    class="nested-image m-auto">
+                                <p class="nested-text text-justify">Additional text for this section. This text supports
+                                    the heading
                                     and provides more information as needed.</p>
                             </div>
                         </div>
@@ -514,8 +588,10 @@
                         <div class="nested-content">
                             <h4 class="nested-heading text-center text-md-left">24/7 Live Support</h4>
                             <div class="nested-body flex-column flex-md-row text-center">
-                                <img src="./img/icons8-google-web-search-100.png" alt="Image 3" class="nested-image m-auto">
-                                <p class="nested-text text-justify">More random text with relevant information. Each section is
+                                <img src="./img/icons8-google-web-search-100.png" alt="Image 3"
+                                    class="nested-image m-auto">
+                                <p class="nested-text text-justify">More random text with relevant information. Each
+                                    section is
                                     separated and contains an image and descriptive text</p>
                             </div>
                         </div>
@@ -535,9 +611,7 @@
                 Request A Callback Now!
             </button>
             <img alt="Smiling customer service representative with a headset" class="banner-image shadow-lg "
-                height="100"
-                src="./img/calling -girl-img.jpg"
-                width="100" />
+                height="100" src="./img/calling -girl-img.jpg" width="100" />
         </div>
     </div>
 

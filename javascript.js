@@ -406,5 +406,38 @@ const roundTripBtn = document.getElementById('roundTripBtn');
             });
         }
 
-        // ==========
+        // ==========   pop-up==============
+        // Select all elements with the class 'open-modal'
+const openModalElements = document.querySelectorAll('.open-modal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const modal = document.getElementById('bookingModal');
+const modalBackdrop = document.getElementById('modalBackdrop');
+
+// Function to open the modal with animation
+function openModal() {
+    modal.style.display = 'block'; // Show modal
+    modalBackdrop.style.display = 'block'; // Show backdrop
+    setTimeout(() => {
+        modal.classList.add('modal-visible'); // Trigger CSS animation
+    }, 10); // Small delay for smooth transition
+}
+
+// Function to close the modal with animation
+function closeModal() {
+    modal.classList.remove('modal-visible'); // Remove animation class
+    setTimeout(() => {
+        modal.style.display = 'none'; // Hide modal after animation
+        modalBackdrop.style.display = 'none'; // Hide backdrop
+    }, 500); // Wait for animation to finish (0.5s)
+}
+
+// Event listener for open (applied to all elements with the 'open-modal' class)
+openModalElements.forEach(element => {
+    element.addEventListener('click', openModal);
+});
+
+// Event listener for close
+closeModalBtn.addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', closeModal); // Close modal on clicking backdrop
+
         
