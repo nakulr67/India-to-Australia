@@ -227,43 +227,43 @@
                 </ul>
 
                 <!-- Modal body -->
-                <div class="modal-body">
+                <div class="modal-body p-0">
                     <form>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="from" class="form-label">From*</label>
+                                <label for="from" class="">From*</label>
                                 <input type="text" class="form-control" id="from" placeholder="City or airport">
                             </div>
                             <div class="col-md-6">
-                                <label for="to" class="form-label">To*</label>
+                                <label for="to" class="">To*</label>
                                 <input type="text" class="form-control" id="to" placeholder="BLR - Bengaluru, Kempegc">
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mb-1">
                             <div class="col">
-                                <label for="departure" class="form-label">Departure*</label>
+                                <label for="departure" class="">Departure*</label>
                                 <input type="text" class="form-control" id="departure" placeholder="23 Sep 24">
                             </div>
                             <div class="col">
-                                <label for="return" class="form-label">Return*</label>
+                                <label for="return" class="">Return*</label>
                                 <input type="text" class="form-control" id="return" placeholder="30 Sep 24">
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Id</label>
+                        <div class="mb-1">
+                            <label for="email" class="">Email Id</label>
                             <input type="email" class="form-control" id="email" placeholder="Email*">
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mb-1">
                             <div class="col">
-                                <label for="phone" class="form-label">Mobile No.</label>
+                                <label for="phone" class="">Mobile No.</label>
                                 <input type="text" class="form-control" id="phone" placeholder="Phone*">
                             </div>
                             <div class="col">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="">Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Your Name">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button type="submit" class="btn btn-submit mt-2">Submit</button>
                     </form>
                 </div>
             </div>
@@ -370,16 +370,16 @@
         <h2>Popular Flight Routes</h2>
         <div class="row">
             <div class="col-md-6 p-3">
-                <button class="btn btn-outline-primary" id="usa-btn">USA Routes</button>
+                <button class="btn btn-outline-primary " id="usa-btn">USA Routes</button>
                 <button class="btn btn-outline-primary" id="india-btn">India Routes</button>
             </div>
         </div>
 
         <!-- USA Flight Routes Section -->
-        <div class="row fade show" id="usa-routes">
+        <div class="row fade show  " id="usa-routes">
             <div class="d-md-flex ">
 
-                <div class="col-md-4">
+                <div class="col-md-4 open-modal" style="cursor: pointer;">
                     <div class="card1 ">
                         <img src="./img/blog2.jpg" alt="New York Image" class="card-img-top " />
                         <div class="card-body1">
@@ -396,7 +396,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Los Angeles Image" class="card-img-top" />
                         <div class="card-body1">
@@ -406,14 +406,14 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$680*</div>
+                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$680*</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
                         <div class="card-body1">
@@ -423,8 +423,8 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$620*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$620*</div>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +432,7 @@
                 </div>
             </div>
             <div class="d-md-flex mt-3 pb-3">
-                <div class="col-md-8 mt-3 mt-md-0">
+                <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
                         <div class="card-body1">
@@ -442,14 +442,14 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$620*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$620*</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
                         <div class="card-body1">
@@ -459,8 +459,8 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$620*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$620*</div>
                                 </div>
                             </div>
                         </div>
@@ -473,7 +473,7 @@
         <!-- India Flight Routes Section (Initially Hidden) -->
         <div class="row fade" id="india-routes" style="display: none;">
             <div class="d-md-flex">
-                <div class="col-md-4">
+                <div class="col-md-4 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Delhi Image" class="card-img-top" />
                         <div class="card-body1">
@@ -483,14 +483,14 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$525*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center ">$525*</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Mumbai Image" class="card-img-top" />
                         <div class="card-body1">
@@ -500,14 +500,14 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$600*</div>
+                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$600*</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Bangalore Image" class="card-img-top" />
                         <div class="card-body1">
@@ -517,8 +517,8 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$580*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$580*</div>
                                 </div>
                             </div>
                         </div>
@@ -526,7 +526,7 @@
                 </div>
             </div>
             <div class="d-md-flex mt-3 pb-3">
-                <div class="col-md-8 mt-3 mt-md-0">
+                <div class="col-md-8 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
                         <div class="card-body1">
@@ -536,14 +536,14 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$620*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$620*</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 mt-md-0">
+                <div class="col-md-4 mt-3 mt-md-0 open-modal" style="cursor: pointer;">
                     <div class="card1">
                         <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
                         <div class="card-body1">
@@ -553,8 +553,8 @@
                                     <small>Fare Starting At</small>
                                 </div>
                                 <div class="text-end">
-                                    <button class="btn btn-primary">BOOK NOW</button>
-                                    <div class="price">$620*</div>
+                                    <button  class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$620*</div>
                                 </div>
                             </div>
                         </div>

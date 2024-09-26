@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to handle button background color change
     function changeButtonBackground(activeBtn, inactiveBtn) {
         // Change the active button's background color
-        activeBtn.style.backgroundColor = 'blue';
+        activeBtn.style.backgroundColor = '#007bff';
         activeBtn.style.color = 'white';
 
         // Revert the inactive button's background color

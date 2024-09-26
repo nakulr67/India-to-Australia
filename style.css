@@ -19,7 +19,7 @@ body {
 
 /* Modal content with animation */
 .modal-content {
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     background: #fff;
     opacity: 0;
@@ -184,7 +184,7 @@ body {
 
 /* Modal content styling */
 .modal-content {
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     background: #fff;
 }
