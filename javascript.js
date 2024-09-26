@@ -134,19 +134,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ====================input seggestion================
 const airports = [
-    { name: "Indira Gandhi International Airport, Delhi", code: "DEL" },
-    { name: "Chhatrapati Shivaji Maharaj International Airport, Mumbai", code: "BOM" },
-    { name: "Kempegowda International Airport, Bengaluru", code: "BLR" },
-    { name: "Netaji Subhash Chandra Bose International Airport, Kolkata", code: "CCU" },
-    { name: "Rajiv Gandhi International Airport, Hyderabad", code: "HYD" },
-    { name: "Chennai International Airport, Chennai", code: "MAA" },
-    { name: "Cochin International Airport, Kerala", code: "COK" },
-    { name: "Dabolim Airport, Goa", code: "GOI" },
-    { name: "Trivandrum International Airport, Kerala", code: "TRV" },
-    { name: "Lokpriya Gopinath Bordoloi International Airport, Guwahati", code: "GAU" },
-    { name: "Swami Vivekananda Airport, Raipur", code: "RPR" },
-    { name: "Jaipur International Airport, Jaipur", code: "JAI" }
+    // India Airports
+    { name: "Indira Gandhi International Airport, Delhi (DEL)", code: "DEL" },
+    { name: "Chhatrapati Shivaji Maharaj International Airport, Mumbai (BOM)", code: "BOM" },
+    { name: "Kempegowda International Airport, Bengaluru (BLR)", code: "BLR" },
+    { name: "Netaji Subhash Chandra Bose International Airport, Kolkata (CCU)", code: "CCU" },
+    { name: "Rajiv Gandhi International Airport, Hyderabad (HYD)", code: "HYD" },
+    { name: "Chennai International Airport, Chennai (MAA)", code: "MAA" },
+    { name: "Cochin International Airport, Kerala (COK)", code: "COK" },
+    { name: "Dabolim Airport, Goa (GOI)", code: "GOI" },
+    { name: "Trivandrum International Airport, Kerala (TRV)", code: "TRV" },
+    { name: "Lokpriya Gopinath Bordoloi International Airport, Guwahati (GAU)", code: "GAU" },
+    { name: "Swami Vivekananda Airport, Raipur (RPR)", code: "RPR" },
+    { name: "Jaipur International Airport, Jaipur(JAI)", code: "JAI" },
+
+    // Australia Airports
+    { name: "Sydney Kingsford Smith Airport, Sydney (SYD)", code: "SYD" },
+    { name: "Melbourne Tullamarine Airport, Melbourne(MEL)", code: "MEL" },
+    { name: "Brisbane Airport, Brisbane(BNE)", code: "BNE" },
+    { name: "Perth Airport, Perth(PER)", code: "PER" },
+    { name: "Adelaide Airport, Adelaide(ADL)", code: "ADL" },
+    { name: "Gold Coast Airport, Gold Coast(OOL)", code: "OOL" },
+    { name: "Canberra Airport, Canberra(CBR)", code: "CBR" },
+    { name: "Cairns Airport, Cairns(CNS)", code: "CNS" },
+    { name: "Hobart International Airport, Hobart(HBA)", code: "HBA" },
+    { name: "Darwin International Airport, Darwin(DRW)", code: "DRW" },
+    { name: "Townsville Airport, Townsville(TSV)", code: "TSV" },
+    { name: "Newcastle Airport, Newcastle(NTL)", code: "NTL" }
 ];
+
 
 const inputFrom = document.getElementById('from-input');
 const inputTo = document.getElementById('to-input');
@@ -440,4 +456,81 @@ openModalElements.forEach(element => {
 closeModalBtn.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal); // Close modal on clicking backdrop
 
-        
+
+// ===========popular flight route============
+document.addEventListener("DOMContentLoaded", function () {
+    const usaBtn = document.getElementById('usa-btn');
+    const indiaBtn = document.getElementById('india-btn');
+    const usaRoutes = document.getElementById('usa-routes');
+    const indiaRoutes = document.getElementById('india-routes');
+
+    // Function to fade out an element
+    function fadeOut(element, duration, callback) {
+        element.style.opacity = 1;
+        let step = 16 / duration; // assuming 60fps, 16ms per frame
+
+        function fade() {
+            let opacity = parseFloat(element.style.opacity);
+            if ((opacity -= step) <= 0) {
+                element.style.opacity = 0;
+                element.style.display = 'none';
+                if (callback) callback();
+            } else {
+                element.style.opacity = opacity;
+                requestAnimationFrame(fade);
+            }
+        }
+
+        fade();
+    }
+
+    // Function to fade in an element
+    function fadeIn(element, duration) {
+        element.style.display = 'block';
+        element.style.opacity = 0;
+        let step = 16 / duration;
+
+        function fade() {
+            let opacity = parseFloat(element.style.opacity);
+            if ((opacity += step) >= 1) {
+                element.style.opacity = 1;
+            } else {
+                element.style.opacity = opacity;
+                requestAnimationFrame(fade);
+            }
+        }
+
+        fade();
+    }
+
+    // Function to handle button background color change
+    function changeButtonBackground(activeBtn, inactiveBtn) {
+        // Change the active button's background color
+        activeBtn.style.backgroundColor = 'blue';
+        activeBtn.style.color = 'white';
+
+        // Revert the inactive button's background color
+        inactiveBtn.style.backgroundColor = '';
+        inactiveBtn.style.color = '';
+    }
+
+    // Show USA routes, hide India routes
+    usaBtn.addEventListener('click', function () {
+        fadeOut(indiaRoutes, 500, function () {
+            fadeIn(usaRoutes, 500);
+        });
+        changeButtonBackground(usaBtn, indiaBtn); // Change the button background
+    });
+
+    // Show India routes, hide USA routes
+    indiaBtn.addEventListener('click', function () {
+        fadeOut(usaRoutes, 500, function () {
+            fadeIn(indiaRoutes, 500);
+        });
+        changeButtonBackground(indiaBtn, usaBtn); // Change the button background
+    });
+
+    // Make USA routes and button active by default
+    fadeIn(usaRoutes, 500); // Show USA routes initially
+    changeButtonBackground(usaBtn, indiaBtn); // Set USA button as active by default
+});

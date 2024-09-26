@@ -12,15 +12,16 @@
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <!-- <meta name="description" content="Book affordable flights from Trycity to various destinations worldwide. Enjoy easy bookings, exclusive deals, and seamless travel experiences tailored for your needs. Find your perfect flight today!"> -->
-            <meta name="description" content="Book affordable flights from Trycity to various destinations. Enjoy easy bookings and exclusive deals. Find your perfect flight today!">
+    <!-- <meta name="description" content="Book affordable flights from Trycity to various destinations worldwide. Enjoy easy bookings, exclusive deals, and seamless travel experiences tailored for your needs. Find your perfect flight today!"> -->
+    <meta name="description"
+        content="Book affordable flights from Trycity to various destinations. Enjoy easy bookings and exclusive deals. Find your perfect flight today!">
 
-        <link rel="canonical" href="https://nakulr67.github.io/flight-tickets/">
+    <link rel="canonical" href="https://nakulr67.github.io/flight-tickets/">
 
     <link rel="stylesheet" href="style.css">
     <title>Book Affordable Flights | Tricity, Chandigarh, Mohali, Panchkula</title>
 
- 
+
 </head>
 
 <body>
@@ -63,6 +64,10 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Visa</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact us</a>
                 </li>
@@ -79,7 +84,7 @@
 
     <div class="banner">
         <div>
-            <h1>Book Your Flights Now</h1>
+            <h1 >Book Your <b> Flights </b> Now </h1>
             <p class="banner-text">
             <div class="flex-wrap " style="height: 40px;">
                 <span id="fixed-text">Easy booking, affordable prices. </span>
@@ -177,8 +182,22 @@
                     <div class="error-message" id="return-error">Select a valid return date</div>
                 </div>
 
+                <div class="form-group mr-1">
+                    <!-- <label >Passengers</label> -->
+                    <select class="form-control" id="passengerSelect">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+                    </select>
+                </div>
+
+
+
                 <div class="form-group text-center mr-2 mr-md-0">
-                    <button type="submit" class="btn-search w-100 ">Search</button>
+                    <button type="submit" class="btn-search w-100 ml-1">Search</button>
                 </div>
             </div>
             </form>
@@ -310,7 +329,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="rating-card">
-                        <h3>Trust Pilot</h3>
+                        <h3>TrustPilot</h3>
                         <div class="rating-details">
                             <img src="./img/plugin-trustpilot.png" alt="Yelp" class="icon">
                             <span class="rating-number">4.6</span>
@@ -342,6 +361,205 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================img section=============== -->
+    <div class="container mt-4 shadow-lg" style="border-radius: 10px;">
+        <h2>Popular Flight Routes</h2>
+        <div class="row">
+            <div class="col-md-6 p-3">
+                <button class="btn btn-outline-primary" id="usa-btn">USA Routes</button>
+                <button class="btn btn-outline-primary" id="india-btn">India Routes</button>
+            </div>
+        </div>
+
+        <!-- USA Flight Routes Section -->
+        <div class="row fade show" id="usa-routes">
+            <div class="d-md-flex ">
+
+                <div class="col-md-4">
+                    <div class="card1 ">
+                        <img src="./img/blog2.jpg" alt="New York Image" class="card-img-top " />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">New York</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary p-1" style="font-size: small;">BOOK NOW</button>
+                                    <div class="price text-center">$750*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Los Angeles Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Los Angeles</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$680*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Chicago</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$620*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-flex mt-3 pb-3">
+                <div class="col-md-8 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Chicago</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$620*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Chicago</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$620*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- India Flight Routes Section (Initially Hidden) -->
+        <div class="row fade" id="india-routes" style="display: none;">
+            <div class="d-md-flex">
+                <div class="col-md-4">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Delhi Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Delhi</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$525*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Mumbai Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Mumbai</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$600*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Bangalore Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Bangalore</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$580*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-flex mt-3 pb-3">
+                <div class="col-md-8 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Chicago</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$620*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="card1">
+                        <img src="./img/blog2.jpg" alt="Chicago Image" class="card-img-top" />
+                        <div class="card-body1">
+                            <div class="overlay d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">Chicago</h5>
+                                    <small>Fare Starting At</small>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-primary">BOOK NOW</button>
+                                    <div class="price">$620*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -384,7 +602,7 @@
         </div>
     </div>   -->
 
-    <div class="container popular-flights-section shadow-lg" style="border-radius: 10px;">
+    <div class="container popular-flights-section mt-5 shadow-lg" style="border-radius: 10px;">
         <h2 class="section-heading text-center p-3 heading">Explore Our Destinations</h2>
         <div class="flight-buttons text-center text-md-left p-2">
             <button class="btn btn-primary shadow-none border-0  active " id="roundTripBtn">Round Trip</button>
@@ -394,7 +612,7 @@
         <div class="row round-trip flight-cards">
             <div class="col-md-6 mt-3">
 
-                <div class="flight-card p-1 open-modal"  style="cursor: pointer;">
+                <div class="flight-card p-1 open-modal" style="cursor: pointer;">
                     <div class="flight-info">
                         <div class="flight-company ">
                             <div>
@@ -904,15 +1122,15 @@
 
 
     <!-- ================FAQ section============ -->
-    <div style="      background-color: black !important;">
-        <div class="container">
-            <h2 class="text-center text-light">FAQ</h2>
+    <div style="background-color: white !important;" class="pb-2">
+        <div class="container shadow-lg pb-1" style="border-radius: 10px;">
+            <h1 class="text-left font-weight-bold pl-2 pt-5" style="color: #007bff;">FAQ</h1>
             <div class="accordion mb-0" id="accordionExample">
                 <div class="item">
                     <div class="item-header" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
+                                aria-expanded="true" aria-controls="collapseOne" style="color: #ffffff;">
                                 Collapsible Item #1
                                 <i class="fa fa-angle-down"></i>
                             </button>
@@ -920,14 +1138,11 @@
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
-                        <div class="t-p">
+                        <div class="t-p" style="color: #333;">
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a
                             more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                            here', making it look like readable English.
                         </div>
                     </div>
                 </div>
@@ -935,21 +1150,18 @@
                     <div class="item-header" id="headingTwo">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                style="color: #ffffff;">
                                 Collapsible Item #2
                                 <i class="fa fa-angle-down"></i>
                             </button>
                         </h2>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="t-p">
+                        <div class="t-p" style="color: #333;">
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                            more-or-less normal distribution of letters.
                         </div>
                     </div>
                 </div>
@@ -957,7 +1169,8 @@
                     <div class="item-header" id="headingThree">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                style="color: #feffff;">
                                 Collapsible Item #3
                                 <i class="fa fa-angle-down"></i>
                             </button>
@@ -965,22 +1178,19 @@
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
-                        <div class="t-p">
+                        <div class="t-p" style="color: #333;">
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
+                            more-or-less normal distribution of letters.
                         </div>
                     </div>
                 </div>
-                <div class="item mb-0">
+                <div class="item ">
                     <div class="item-header mb-0" id="headingFour">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                                style="color: #ffffff;">
                                 Collapsible Item #4
                                 <i class="fa fa-angle-down"></i>
                             </button>
@@ -988,10 +1198,10 @@
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                         data-parent="#accordionExample">
-                        <div class="t-p mb-3 " style="height: fit-content !important;">
+                        <div class="t-p mb-3" style="color: #333;">
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here,
+                            more-or-less normal distribution of letters.
                         </div>
                     </div>
                 </div>
@@ -1000,9 +1210,16 @@
     </div>
 
 
+
     <footer class="footer">
         <div class="container-fluid bottom_border">
+            <div class="col-md-5">
+
+                <img src="./img/visa logo.png" class="w-100 d-block" alt="">
+            </div>
+
             <div class="row">
+
                 <div class="col-sm-4 col-md col-12">
                     <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
                     <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -1065,7 +1282,7 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+           
 
             <ul class="social_footer_ul d-flex align-content-center justify-content-center">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -1073,9 +1290,25 @@
                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
+            <div class=" container d-flex align-content-center justify-content-center flex-column text-white">
+                
+
+                    <div class=" mt-4" style="height: 2px; background: #feffff; width: 100%;"></div>
+                    <div class="p-2 font-weight-bolder">
+                        Disclaimer
+                    </div>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, delectus, ullam deleniti sunt iste asperiores placeat, libero cupiditate non architecto fugiat quidem reprehenderit ducimus eius assumenda sit. Minus, sint enim.
+                        it. Illo, delectus, ullam deleniti sunt iste asperiores placeat, libero cupiditate non architecto fugiat quidem reprehenderit ducimus 
+                    </p>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.qui saepe repudiandae neque, quo alias est!</p>
+                    <span class="text-center"><p>COPYRIGHT © <script>document.write(new Date().getFullYear());</script><a href="#">Your Company Name</a> ALL RIGHTS RESERVED.</p>
+                    </span>
+                
+            </div>
         </div>
+
     </footer>
-    <a href="./Robots.txt"></a>
+
 
 
 
@@ -1096,7 +1329,7 @@
           }
         }
         </script>
-        
+
 
     <script src="javascript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

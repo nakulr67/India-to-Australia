@@ -272,7 +272,7 @@ body {
     border: none;
     border-bottom: 2px solid #ccc;
     border-radius: 8px;
-    padding: 16px 15px;
+    /* padding: 16px 15px; */
     width: 100%;
     font-size: 16px;
     height: 45px;
@@ -378,7 +378,7 @@ body {
 
 .btn-search {
     border-radius: 8px;
-    padding: 10px 75px;
+    padding: 10px 15px;
     background: linear-gradient(90deg, #007bff, #0056b3);
     color: #fff;
     border: none;
@@ -397,6 +397,8 @@ body {
     display: flex;
     justify-content: space-between !important;
     align-items: center;
+    padding-left: 10px ;
+    padding-right: 10px;
 }
 
 .form-row .form-group {
@@ -494,6 +496,49 @@ body {
         margin-bottom: 20px;
     }
 }
+/* ===============img-section=================== */
+.card1 {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card1 img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+
+  .card1:hover img {
+    transform: scale(1.1); /* Image zoom on hover */
+  }
+
+  .card-body1 {
+    position: relative;
+    padding: 0;
+  }
+
+  .card-body1 .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .card-body .overlay .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-body .overlay .btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
 
 /* ====================btn-section================ */
 .btn-custom {
@@ -1205,68 +1250,90 @@ body {
 
 
 /* ==================FAQ=================== */
-
-.accordion{
+.accordion {
     margin: 40px 0;
-  }
-  .accordion .item {
-      border: none;
-      margin-bottom: 50px;
-      background: none;
-  }
-  .t-p{
-    color: rgb(193 206 216);
-    padding: 40px 30px 0px 30px;
+}
+
+.accordion .item {
+    border: none;
+    margin-bottom: 20px;
+    background: none;
+}
+
+.t-p {
+    color: #c1ced8;
+    padding: 40px 30px 0 30px;
     text-align: justify;
-  }
-  .accordion .item .item-header h2 button.btn.btn-link {
-      background: #333435;
-      color: white;
-      border-radius: 0px;
-      font-family: 'Poppins';
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 2.5;
-      text-decoration: none;
-  }
-  .accordion .item .item-header {
-      border-bottom: none;
-      background: transparent;
-      padding: 0px;
-      margin: 2px;
-  }
-  
-  .accordion .item .item-header h2 button {
-      color: white;
-      font-size: 20px;
-      padding: 15px;
-      display: block;
-      width: 100%;
-      text-align: left;
-  }
-  
-  .accordion .item .item-header h2 i {
-      float: right;
-      font-size: 30px;
-      color: #eca300;
-      background-color: black !important;
-      width: 60px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-  }
-  
-  button.btn.btn-link.collapsed i {
-      transform: rotate(0deg);
-  }
-  
-  button.btn.btn-link i {
-      transform: rotate(180deg);
-      transition: 0.5s;
-  }
-  
+    background-color: #f5f5f5; /* Light blue background for content */
+    border-radius: 8px;
+    padding: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.t-p:hover {
+    background-color: #e0f0ff; /* Hover effect: lighter blue */
+}
+
+.accordion .item .item-header h2 button.btn.btn-link {
+    background: #0056b3; /* Blue background */
+    color: white;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.5;
+    text-decoration: none;
+    padding: 0px 15px;
+    transition: background 0.3s ease;
+}
+
+.accordion .item .item-header h2 button.btn.btn-link:hover {
+    background: #004494; /* Darker blue on hover */
+}
+
+.accordion .item .item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0;
+    margin: 2px;
+}
+
+.accordion .item .item-header h2 button {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .item .item-header h2 i {
+    float: right;
+    margin-top: 5px;
+    font-size: 30px;
+    color: rgb(85, 85, 156); /* Orange icon color */
+    background-color: white;    
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+button.btn.btn-link i {
+    transform: rotate(180deg);
+}
+
+button.btn.btn-link i:hover {
+    transform: rotate(360deg); /* Full rotation on hover */
+}
+
 /* ==============footer============== */
 /* .footer-02 .subscribe-form .form-group input {
     background: transparent !important;
